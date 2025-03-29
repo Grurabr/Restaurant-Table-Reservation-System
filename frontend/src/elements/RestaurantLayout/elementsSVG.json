@@ -1,0 +1,123 @@
+{
+    "svgs": [{
+            "id": "round_table_2",
+            "svg": [
+            "<svg viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <circle cx='100' cy='50' r='45' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <path d='M30,25 Q15,50 30,75 L50,75 Q40,50 50,25 Z'/>",
+            "       <path d='M170,25 Q185,50 170,75 L150,75 Q160,50 150,25 Z'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "round_table_4",
+            "svg": [
+            "<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <circle cx='100' cy='100' r='50' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <path d='M75,25 Q100,10 125,25 L125,45 Q100,35 75,45 Z'/>",
+            "       <path d='M75,175 Q100,190 125,175 L125,155 Q100,165 75,155 Z'/>",
+            "       <path d='M25,75 Q10,100 25,125 L45,125 Q35,100 45,75 Z'/>",
+            "       <path d='M175,75 Q190,100 175,125 L155,125 Q165,100 155,75 Z'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "round_table_6",
+            "svg": [
+            "<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <circle cx='100' cy='100' r='55' class='table-svg' />",
+            "   <g class='chairs-svg'>",
+            "       <g transform='rotate(0,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "       <g transform='rotate(60,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "       <g transform='rotate(120,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "       <g transform='rotate(180,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "       <g transform='rotate(240,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "       <g transform='rotate(300,100,100)'><path d='M180,75 Q195,100 180,125 L160,125 Q170,100 160,75 Z'/></g>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "rect_table_sofas",
+            "svg": [
+            "<svg viewBox='0 0 250 200' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <rect x='75' y='0' width='100' height='200' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <rect x='0' y='0' width='60' height='200' rx='10'/>",
+            "       <rect x='190' y='0' width='60' height='200' rx='10'/>",
+            "   </g>",
+            "   <g class='sofa-svg'>",
+            "       <rect x='0' y='0' width='30' height='200' rx='10'/>",
+            "       <rect x='220' y='0' width='30' height='200' rx='10'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "rect_table_2",
+            "svg": [
+            "<svg viewBox='0 0 250 100' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <rect x='80' y='0' width='90' height='90' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <path d='M215,15 Q235,45 215,75 L180,75 L180,15 Z'/>",
+            "       <path d='M35,75 Q15,45 35,15 L70,15 L70,75 Z'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "rect_table_4",
+            "svg": [
+            "<svg viewBox='0 0 250 150' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <rect x='75' y='0' width='100' height='150' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <path d='M220,10 Q240,40 220,70 L185,70 L185,10 Z'/>",
+            "       <path d='M220,80 Q240,110 220,140 L185,140 L185,80 Z'/>",
+            "       <path d='M30,70 Q10,40 30,10 L65,10 L65,70 Z'/>",
+            "       <path d='M30,140 Q10,110 30,80 L65,80 L65,140 Z'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "rect_table_6",
+            "svg": [
+            "<svg viewBox='0 0 250 200' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <rect x='75' y='0' width='100' height='200' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <path d='M220,5 Q240,35 220,65 L185,65 L185,5 Z'/>",
+            "       <path d='M220,70 Q240,100 220,130 L185,130 L185,70 Z'/>",
+            "       <path d='M220,135 Q240,165 220,195 L185,195 L185,135 Z'/>",
+            "       <path d='M30,65 Q10,35 30,5 L65,5 L65,65 Z'/>",
+            "       <path d='M30,130 Q10,100 30,70 L65,70 L65,130 Z'/>",
+            "       <path d='M30,195 Q10,165 30,135 L65,135 L65,195 Z'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        },
+        {
+            "id": "rect_table_8",
+            "svg": [
+            "<svg viewBox='0 0 250 350' xmlns='http://www.w3.org/2000/svg' class='table-element-svg'>",
+            "   <rect x='75' y='75' width='100' height='200' class='table-svg'/>",
+            "   <g class='chairs-svg'>",
+            "       <rect x='0' y='0' width='200' height='60' rx='10'/>",
+            "       <rect x='0' y='290' width='200' height='60' rx='10'/>",
+            "       <rect x='0' y='0' width='60' height='350' rx='10'/>",
+            "   </g>",
+            "   <g class='sofa-svg'>",
+            "       <rect x='0' y='0' width='200' height='30' rx='10'/>",
+            "       <rect x='0' y='320' width='200' height='30' rx='10'/>",
+            "       <rect x='0' y='0' width='30' height='350' rx='10'/>",
+            "   </g>",
+            "</svg>"
+            ]
+        }
+    ]
+  }
+  
+

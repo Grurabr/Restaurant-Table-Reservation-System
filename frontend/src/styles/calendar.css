@@ -1,0 +1,160 @@
+.calendar-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.calendar-controls {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    align-items: baseline;
+}
+
+.calendar-control-container {
+    flex: 1;
+}
+.calendar-control-container.button {
+    text-wrap: nowrap;
+}
+.calendar-control-container.button button {
+    width: 100%;
+}
+
+.calendar-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+ 
+/* month */
+.calendar-month-container {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.calendar-month-name {
+    color: #444;
+    margin-bottom: 5px;
+}
+  
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* week */
+.calendar-week-days th {
+    color: var(--primary-color);
+}
+
+.calendar-week-number {
+    font-weight: bold;
+    background-color: var(--secondary-color);
+}
+
+/* day */
+.calendar-day-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+.calendar-day-button {
+    color: black;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.calendar-day-popup {
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    background: white;
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 150px;
+    max-width: 200px;
+    width: max-content;
+    text-align: left;
+}
+.calendar-day-popup.start {
+    left: 0%;
+    transform: translateX(0%);
+}
+.calendar-day-popup.end {
+    right: 0%;
+    transform: translateX(0%);
+}
+
+.calendar-day-popup * {
+    font-size: 80%;
+}
+  
+.calendar-day-popup button {
+    width: 100%;
+}
+.calendar-input-field label {
+    color: var(--text-color);
+}
+
+/* special days */
+.calendar-weekend-day .calendar-day-button{
+    color: red;
+}
+  
+.calendar-special-day .calendar-day-button{
+    background-color: #28a745;
+    color: white;
+}
+
+.calendar-closed-day .calendar-day-button{
+    background-color: lightgray;
+    color: #444;
+}
+
+/* Small screen */
+@media (max-width: 768px) {
+    .calendar-control .select-container,
+    .calendar-control{
+        min-width: 100px;
+    }
+
+    .calendar-month-container {
+        padding: 0px;
+    }
+
+    .calendar-month-name {
+        padding: 5px;
+    }
+    .calendar-table th,
+    .calendar-table td {
+        font-size: 16px;
+        padding: 2px;
+    }
+}
+  
+  
+  
+  
+  
+  
+  

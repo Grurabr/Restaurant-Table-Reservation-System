@@ -1,0 +1,251 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    min-height: 85px;
+    align-items: center;
+    justify-content: space-between; /* Ensures logo is on the left and items are spaced */
+    background-color: var(--background-color);
+    padding: 30px 30px 15px 30px;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    min-width: max-content;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    align-content: end;
+    transition: color 0.1s ease-in-out;
+    padding-right: 20px; /* Adds space between logo and nav items */
+}
+
+.logo:hover {
+    color: #ff6b6b;
+}
+
+/* Navigation container */
+.nav-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-scroll-wrapper {
+    position: relative;
+    padding: 0px 40px;
+    min-width: 0px;
+}
+  
+.navbar-scroll-container {
+    height: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scrollbar-color: rgb(0,0,0,0) rgb(0,0,0,0);
+}
+  
+.navbar-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navigation links */
+.nav-links {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links > li {
+    align-content: center;
+    min-width: fit-content;
+}
+
+/* Links */
+.nav-links a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    color: #555;
+    font-size: 95%;
+    transition: color 0.1s ease-in-out;
+}
+
+.nav-links li:hover a{
+    color: var(--primary-color);
+}
+/* Scroll buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+  
+.scroll-button:hover {
+    background: #f0f0f0;
+}
+  
+.left {
+    left: 0;
+}
+  
+.right {
+    right: 0;
+}
+
+.left::after {
+    content: "<";
+    color: var(--primary-color);
+    font-size: 26px;
+    font-weight: 800;
+}
+  
+.right::after {
+    content: ">";
+    color: var(--primary-color);
+    font-size: 26px;
+    font-weight: 800;
+}
+
+/* Logout button */
+.logout-button-wrapper {
+    padding: 0px 10px;
+}
+
+.logout-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #d43f3f;
+}
+
+/* Burger button */
+.burger-menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    perspective: 100px;
+    margin-left: auto; /* Moves burger menu to the right */
+}
+
+.burger-menu::after {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .burger-menu::after {
+        content: "☰";
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        transition: transform 0.5s ease, opacity 0.3s ease;
+        display: inline-block;
+        transform-origin: center;
+    }
+
+    .navbar-scroll-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar-scroll-wrapper.open {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .navbar-scroll-wrapper.open ~ .burger-menu::after {
+        content: "x";
+        transform: rotateY(180deg);
+    }
+      
+    .navbar-scroll-container {
+        height: 100%;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        scrollbar-color: rgb(0,0,0,0) rgb(0,0,0,0);
+    }
+      
+    .navbar-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scroll-button {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li:hover {
+        background-color: #dddddd97;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .logout-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar {
+        padding: 20px 10px 15px 10px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+}
+

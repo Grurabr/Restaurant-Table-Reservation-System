@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* colors and over*/
+:root {
+    --primary-color: #d5a36a; 
+    --secondary-color: #0b0849; 
+    --background-color: rgb(255, 255, 255);
+    --text-color: var(--secondary-color);
+    --services-background-color: rgba(255, 255, 255, 0.5);
+    --background-color-dark:  rgb(132 132 132);
+    --main-content: rgba(53, 53, 53, 0.5);
+    --main-text-color: white;
+    --scroll-color: #d5a36acf;
+    --read-only: #3c1507;
+    --disabled: lightgray;
+    --disabled-button-background-color: darkgray;
+    --disabled-button-color: lightgray;
+    --light-gray: lightgray;
+    --dark-gray: darkgray;
+    --placeholder: rgba(9, 7, 60, 0.5);
+    --field-border: rgba(9, 7, 60, 0.75);
+    --delete-button: #ff6b6b;
+    --delete-button-hover: #d43f3f;
+    --white: white;
+    --black: black;
+    --warning-color: #ff6b6b;
+    --unconfirmed-card-color: #f7eda0;
+    --today-card-color: #98d596;
+    --link-color: rgb(0, 153, 255);
+    --button-hover-color: #0d0a53;
+    --dropdown-hover-color: rgb(245, 225, 198);
+    --border-radius: 5px;
+    --highlight-color: peru;
+    --table-color: #D4A373;
+    --table-stroke: #8D5524;
+    --chair-color: #5276c5;
+    --chair-stroke: #211b5a;
+    --sofa-color: #8b5a2b;
+    --sofa-stroke: #5a3d1b;
+}
+
+/* main */
+html {
+    scrollbar-color: var(--scroll-color) rgb(0,0,0,0);
+    scroll-behavior: smooth;
+}
+
+body > #root > div {
+    height: 100vh;
+} 
+
+* {
+    box-sizing: border-box;
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 21px;
+}
+
+/* background colors */
+.bg-cl-1 { background-color: rgb(92, 92, 92); }
+.bg-cl-2 { background-color: rgb(195, 195, 195); }
+.bg-cl-3 { background-color: var(--white); }
+.bg-cl-4 { background-color: var(--background-color); }
+
+/* text colors */
+.cl-1 { color: var(--white); }
+.cl-2 { color: var(--black); }
+.cl-3 { color: var(--background-color); }
+.cl-4 { color: var(--primary-color); }
+
+/* opacity */
+.op-85 { opacity: 0.85; }
+.op-80 { opacity: 0.8; }
+.op-75 { opacity: 0.75; }
+.op-65 { opacity: 0.65; }
+.op-60 { opacity: 0.6; }
+.op-55 { opacity: 0.55; }
+.op-45 { opacity: 0.45; }
+.op-40 { opacity: 0.4; }
+.op-35 { opacity: 0.35; }
+.op-25 { opacity: 0.25; }
+.op-20 { opacity: 0.2; }
+.op-15 { opacity: 0.15; }
+.op-100 { opacity: 1; }
+
+/* fonts */
+.merienda { font-family: "Merienda", serif; }
+.red-hat-display { font-family: "Red Hat Display", serif; }
+
+/* font sizes */
+.fnt-22 { font-size: 22px; }
+.fnt-26 { font-size: 26px; }
+.fnt-30 { font-size: 30px; }
+
+/* font weights */
+.fnt-n, .fnt-b { font-weight: bold; }
+
+/* text */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0px;
+}
+h2 {
+    font-size: 2.15rem;
+    font-weight: 400;
+    margin: 0px;
+}
+h3 {
+    font-size: 1.80rem;
+    font-weight: 400;
+    margin: 0px;
+}
+h4 {
+    font-size: 1.45rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.warning {
+    color: var(--warning-color);
+    font-size: 85%;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+/* toast*/
+.toast-container {
+    top: 10px !important;
+}
+/* links */
+.link {
+    color: transparent;
+    font-size: 26px;
+    text-decoration: none;
+}
+/* list */
+.list-container {
+    margin-top: 5px;
+}
+/* tabs */
+.tabs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+.tab {
+    flex: 1 1 auto;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab:hover {
+  color: var(--secondary-color);
+}
+
+.tab.active {
+    color: var(--primary-color);
+}
+/* form */
+.form-wrapper {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    min-width: 375px;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.form-content > * {
+    margin: 0;
+}
+  
+.basic-input-container, .input-container, .select-container, .checkbox-container {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    width: 100%;
+}
+
+.input-container {
+    margin-top: 10px;
+}
+
+.basic-input-container input,
+.basic-input-container select,
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 15px 10px;
+    appearance: initial;
+    background-color: var(--background-color);
+    border: 1px solid var(--field-border);
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+}
+
+.basic-input-container input,
+.basic-input-container select {
+    border-color: lightgray;
+}
+
+.basic-input-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--background-color);
+}
+
+.input-container label {
+    min-width: 0;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--background-color);
+    padding: 0 5px;
+    color: var(--placeholder);
+    transition: 0.3s ease-in-out;
+    cursor: text;
+    z-index: 1;
+}
+
+.select-container::after {
+    content: '▼'; 
+    font-size: 12px;
+    color: var(--primary-color);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container select:focus + label,
+.input-container select:not([value=""]) + label {
+    top: 0;
+    left: 5px;
+    font-size: 80%;
+    color: var(--field-border);
+}
+
+.input-container select:focus + label + ::after,
+.input-container select:active + label + ::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--secondary-color);
+}
+
+.input-container input:read-only{
+    color: var(--read-only);
+}
+
+.select-field {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.select-field option {
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-label {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.checkbox-input:checked + .checkbox-label .custom-checkbox {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-input:checked + .checkbox-label .custom-checkbox::after {
+    content: "✔";
+    font-size: 16px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-input:checked + .checkbox-label{
+    color: var(--secondary-color);
+}
+
+.checkbox-input:focus + .checkbox-label .custom-checkbox {
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+/* date picker */
+.react-datepicker__day--weekend {
+    color: red !important; 
+}
+
+.react-datepicker__day--disabled {
+    color: #d0d0d0 !important;
+    cursor: not-allowed !important;
+}
+
+.react-datepicker__day--selected {
+    color:  white !important;
+    background-color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+
+.custom-datepicker {
+    padding: 5px 10px 5px 40px!important;
+}
+
+.custom-datepicker + .react-datepicker__close-icon::after {
+    color: var(--secondary-color) !important;
+    background-color: var(--primary-color) !important;
+    height: 20px !important;
+    width: 24px !important;
+    font-size: 20px;
+    box-sizing: border-box !important;
+}
+
+/* tooltip */
+.tooltip-activator {
+    position: relative;
+}
+
+.tooltip-container {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.tooltip-activator:hover .tooltip-container{
+    display: block;
+}
+
+/* buttons */  
+.actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+} 
+
+.action {
+    flex: 1;
+} 
+
+.action-button, .save-button, .cancel-button, .delete-button {
+    padding: 15px 20px;
+    margin: 0;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.action-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.action-button * {
+    color: var(--white);
+}
+
+.save-button {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+.save-button * {
+    color: var(--white);
+}
+
+.cancel-button {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+}
+.cancel-button * {
+    color: var(--dark-gray);
+}
+
+.delete-button {
+    background: var(--delete-button);
+    color: var(--background-color);
+}
+.delete-button * {
+    color: var(--background-color);
+}
+
+.action-button:hover, .action-button:hover * {
+    color: var(--button-hover-color);
+}
+.save-button:hover, .save-button:hover * {
+    color: var(--primary-color);
+}
+.cancel-button:hover, .cancel-button:hover * {
+    color: var(--black);
+}
+.delete-button:hover, .delete-button:hover * {
+    color: var(--black);
+}
+
+.save-button:active {
+    background-color: var(--button-hover-color);
+}
+.cancel-button:active {
+    background-color: var(--dark-gray);
+}
+.delete-button:active {
+    background-color: var(--delete-button-hover);
+}
+
+button:disabled,
+button:disabled:hover {
+    background: var(--disabled-button-background-color) !important;
+    color: var(--disabled-button-color) !important;
+    cursor: not-allowed !important;
+}
+
+button:disabled *,
+button:disabled:hover * {
+    color: var(--disabled-button-color) !important;
+}
+
+/* forgot password */
+.forgot_password {
+    text-align: left;
+    color: var(--link-color);
+    font-size: 85%;
+}
+/* popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+  
+.popup-content {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border-width: 1px 0 0 0;
+    min-width: 200px;
+    z-index: 3;
+}
+
+.dropup-content {
+    bottom: 10px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    min-width: -webkit-fill-available;
+    text-align: left;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--dropdown-hover-color) !important;
+    border-radius: var(--border-radius);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-link,
+.dropdown:hover .dropdown-svg {
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+/* Medium screen */
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.95rem;
+    }
+    h3 {
+        font-size: 1.65rem;
+    }
+    h4 {
+        font-size: 1.35rem;
+    }
+}
+/* Small screen */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.50rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+}

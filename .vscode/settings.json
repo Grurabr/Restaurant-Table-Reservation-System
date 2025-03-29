@@ -1,0 +1,21 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {
+                    "ca": ""
+                }
+            },
+            "previewLimit": 50,
+            "server": "restaurant2-table-reservation.mysql.database.azure.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "AzureSQL",
+            "database": "table_reservation",
+            "username": "restaurant",
+            "password": "HelloKitty!"
+        }
+    ]
+}

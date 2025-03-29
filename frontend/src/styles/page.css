@@ -1,0 +1,380 @@
+/* cards */
+.cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.card-item {
+    flex: 1 1 auto;
+    background: rgb(237, 237, 237);
+    padding: 20px 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: 0px 0px 1px 0px;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+    min-width: 300px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.card-item.active {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.card-item.unconfirmed {
+    background-color: var(--unconfirmed-card-color);
+    border: none;
+}
+
+.card-item.today {
+    background-color: var(--today-card-color);
+    border: none;
+}
+
+.card-container {
+    position: relative;
+    max-height: 245px;
+    scrollbar-color: rgb(0,0,0,0) rgb(0,0,0,0);
+}
+
+.card-content {
+    max-height: 215px;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+}
+
+.card-content ul {
+    width: fit-content;
+    margin-bottom: 0px;
+}
+
+.card-container.open,
+.card-content.open {
+    max-height: fit-content;
+}
+
+.card-item:hover {
+    transform: scale(1.037);
+}
+
+.card-button-wrapper > button {
+    margin-right: 10px;
+    font-size: 95%;
+    padding: 5px 15px;
+}
+/* Info page */
+.info-wrapper {
+    max-width: 500px;
+    margin: auto;
+}
+
+.info-title, .info-email {
+    margin-bottom: 20px;
+}
+.info-container {
+    min-width: 500px;
+}
+
+.info-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-container button{
+    width: 100%;
+}
+/* Reservation page */
+.res-spec-day {
+    color: rgb(15, 138, 15) !important;
+}
+
+.schema-container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    border: 1px solid var(--primary-color);
+}
+
+.reservation-container {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 10px solid var(--primary-color);
+    padding: 20px 10px;
+}
+
+.reservation-container form{
+    min-width: 500px;
+    width: min-content;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.reservation-container form > button {
+    width: 100%;
+}
+
+.reservation-data-container {
+    text-align: center;
+}
+
+.service-wrapper {
+    width: 100%;
+}
+
+.service-container {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+
+.service-item {
+    margin-bottom: 10px;
+}
+
+/* Admin page */
+.admin-page {
+    max-width: 100% !important;
+}
+.admin-panel-date-picker {
+    width: fit-content !important;
+}
+
+.admin-panel-date-picker label{
+    text-align: center;
+}
+
+.admin-panel-cards {
+    display: flex;
+    gap: 40px;
+}
+
+.cards-block {
+    flex: 1 1 auto;
+}
+
+/* Restaurant schema page */
+.shema-wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+/* Open ours page */
+.days-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.day-row-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: rgb(237, 237, 237);
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    margin: 10px 0px;
+}
+
+.day-container {
+    display: inline;
+    min-width: 150px;
+}
+
+.days-container > form > button {
+    min-width: 100%;
+}
+
+.close-chbox-container {
+    width: fit-content;
+}
+
+.close-checkbox {
+    min-width: 40px !important;
+}
+
+.close-indicator {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.time-wrapper {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.time-container {
+    flex: 1;
+    max-width: 200px;
+}
+
+.time-input {
+    min-width: 150px !important;
+}
+.time-input label {
+    margin-bottom: 0px !important;
+    font-size: 70% !important;
+    color: black !important;
+    text-align: center;
+}
+
+/* Analytic page */
+.analytic-page {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filters-wrapper {
+    max-width: 1080px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.filters-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-item {
+    flex-grow: 1;
+    max-width: 200px;
+}
+.filter-item.button {
+    max-width: 100%;
+}
+.filter-item.button button {
+    min-width: 100%;
+}
+
+.filters-content label {
+    text-align: center;
+}
+.filters-content input, .filters-content button {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.report-analytic-wrapper {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+}
+
+.report-wrapper, .analytic-wrapper {
+    flex: 1;
+}
+
+.analytic-content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.top-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+.top-input-wrapper {
+    width: 50px;
+}
+
+.top-input {
+    min-width: 50px !important;
+}
+.top-input input {
+    padding: 5px !important;
+}
+
+.analytic-block {
+    flex: 1;
+    min-width: 300px;
+    padding: 5px;
+    background-color: rgba(92, 92, 92, 0.254);
+    border-radius: 10px;
+}
+
+.analytic-block li {
+    font-weight: 600;
+}
+
+
+/* Medium screen */
+@media (max-width: 1080px) {
+    .report-analytic-wrapper {
+        flex-flow: column;
+    }
+    .analytic-block {
+        min-width: 200px;
+    }
+}
+
+/* Small screen */
+@media (max-width: 768px) {
+    /* info page */
+    .info-wrapper {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .info-container {
+        min-width: 0px;
+    }
+
+    /* reservation page */
+    .reservation-container form {
+        min-width: 0px;
+        width: auto;
+    }
+
+    /* admin page */
+    .admin-panel-cards {
+        flex-flow: row wrap;
+    }
+
+    /* schedule page */
+    .day-container {
+        min-width: 120px;
+    }
+
+    .day-row-container {
+        justify-content: center;
+    }
+
+    .time-wrapper {
+        min-width: 100%;
+        justify-content: center;
+    }
+}
